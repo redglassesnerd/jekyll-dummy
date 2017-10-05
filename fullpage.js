@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<div id="fullpage">
+	<div class="section">Some section</div>
+	<div class="section">Some section</div>
+	<div class="section">Some section</div>
+	<div class="section">Some section</div>
+</div>
