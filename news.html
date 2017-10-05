@@ -1,5 +1,15 @@
 ---
-layout: default
+layout: news
 ---
 
 <h1>News section</h1>
+
+
+<ul>
+	{% for news in site.categories.news limit:1 %}
+		<li>
+			<a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
+			<p>{{news.meta}}</p>
+		</li>
+	{% endfor %}
+</ul>

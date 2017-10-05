@@ -2,8 +2,9 @@
 <html>
 <head>
 	<title>THis is my page</title>
-	
-<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/jquery.fullPage.css" />
 <script type="text/javascript">
 	$(document).ready(function() {
 	$('#fullpage').fullpage();
@@ -21,14 +22,14 @@
 <script type="text/javascript" src="{{site.baseurl}}/js/jquery.fullPage.js"></script>
 </head>
 <body>
-<header>
+<header class='masthead'>
 	<h1>Dan's site</h1>
-	<nav>
-		<ul>
-			<li><a href="{{site.baseurl}}/index.html">Home<a></li>
-			<li><a href="{{site.baseurl}}/news.html">News<a></li>
-		</ul>
-	</nav>
+
+{% include nav.html navclass='nav-top' %}
+
+{% include nav.html navclass='nav-bottom' %}
+
+
 </header>
 {{content}}
 

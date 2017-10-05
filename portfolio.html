@@ -1,0 +1,15 @@
+---
+layout: news
+---
+
+<h1>Portfolio section</h1>
+
+
+<ul>
+	{% for news in site.categories.portfolio limit:1 %}
+		<li>
+			<a href="">{{news.title}}</a>
+			<p>{{news.meta}}</p>
+		</li>
+	{% endfor %}
+</ul>

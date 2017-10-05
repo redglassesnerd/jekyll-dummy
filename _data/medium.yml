@@ -1,0 +1,11 @@
+- title: Animation
+  folder: animation
+  content: 'A cartoon'
+
+- title: Painting
+  folder: painting
+  content: 'uses paints'
+
+- title: Website
+  folder: website
+  content: 'this is a website'

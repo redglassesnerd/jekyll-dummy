@@ -4,3 +4,11 @@ layout: default
 <h1>This is my body text and stuff</h1>
 <p>plugging in some detail</p>
 <p>Chewbacca the wookie</p>
+<ol>
+{% for medium in site.data.medium %}
+	<li>
+		<a href="{{site.baseurl}}/medium/{{medium.folder}}">{{medium.title}}</a>
+		{{}}
+	</li>
+{% endfor %}
+</ol>

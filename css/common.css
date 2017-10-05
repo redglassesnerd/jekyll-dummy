@@ -1,0 +1,17 @@
+body{
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+}
+
+.current{
+	background:green;
+	color:white;
+}
+
+.masthead{
+	padding: 1em;
+	background: url("/img/test.jpg") no-repeat center center;
+	background-size: cover;
+
+}
