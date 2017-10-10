@@ -6,9 +6,9 @@ layout: news
 
 
 <ul>
-	{% for news in site.categories.portfolio limit:1 %}
+	{% for news in site.categories.portfolio limit: %}
 		<li>
-			<a href="">{{news.title}}</a>
+			<a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
 			<p>{{news.meta}}</p>
 		</li>
 	{% endfor %}

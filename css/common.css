@@ -1,7 +1,8 @@
 body{
 	margin:0;
 	padding:0;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
+	background:#F5F5F5;
 }
 
 .current{
@@ -11,7 +12,44 @@ body{
 
 .masthead{
 	padding: 1em;
-	background: url("/img/test.jpg") no-repeat center center;
+	background: url("../img/test.jpg") no-repeat center center;
 	background-size: cover;
 
+}
+
+.card{
+	padding:100px;
+	background: #FFFFFF;
+}
+
+h1{
+font-family: Roboto-Bold;
+font-size: 56px;
+color: #0379BE;
+}
+
+.info{
+font-family: Roboto-Medium;
+font-size: 16px;
+color: #0379BE;
+line-height: 29px;
+width:400px;
+z-index: 1000;
+}
+
+.infoback{
+	z-index:0;
+}
+
+
+/*starting to put the lines in behind the box*/
+
+h1:before {
+    content: '';
+    width: 100%;
+    border-bottom:  11px dotted #ADC8F6;;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 0;
 }

@@ -2,26 +2,35 @@
 <html>
 <head>
 	<title>THis is my page</title>
-	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/common.css">
 
-<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/jquery.fullPage.css" />
-<script type="text/javascript">
-	$(document).ready(function() {
-	$('#fullpage').fullpage();
-});
-</script>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/jquery.fullPage.css" />
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
-<script src="{{site.baseurl}}/vendors/jquery.easings.min.js"></script>
+<script src="{{ site.baseurl }}/vendors/jquery.easings.min.js"></script>
 
+<script type="text/javascript" src="{{ site.baseurl }}/vendors/scrolloverflow.min.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/jquery.fullPage.js"></script>
 
-<!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
-<script type="text/javascript" src="{{site.baseurl}}/vendors/scrolloverflow.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+              sectionsColor: ['#F5F5F5', '#F5F5F5', '#F5F5F5', 'F5F5F5', '#F5F5F5'],
+              anchors: ['home', 'item 1', 'item 2', 'item 3', 'lastPage'],
+              menu: '#menu',
+                  paddingTop: '50px',
+    paddingBottom: '50px',
+            });
+        });
+    </script>
 
-<script type="text/javascript" src="{{site.baseurl}}/js/jquery.fullPage.js"></script>
 </head>
-<body>
+<body><!-- 
 <header class='masthead'>
 	<h1>Dan's site</h1>
 
@@ -30,7 +39,7 @@
 {% include nav.html navclass='nav-bottom' %}
 
 
-</header>
+</header> -->
 {{content}}
 
 </body>

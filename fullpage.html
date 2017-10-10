@@ -2,19 +2,24 @@
 layout: default
 ---
 
+
 <div id="fullpage">
-	<div class="section active">Some section</div>
-	<div class="section">Some section</div>
-	<div class="section">Some section</div>
-	<div class="section">Some section</div>
+	<div class="section active">Some section
+
+<!-- this is the loop that grabs the portfolio items -->
+{% for news in site.categories.portfolio limit: %}
+<div class="slide card" data-anchor="{news.title}}">
+  <h1>{{news.title}}</a>
+ <!-- this is not taking affect. The JS is overiding with it's tempalte. Need to hack it at this level to get it working. Tried targettging the H1 and managedd to get something that looked ok. Good news is I think i can do the dotted guides as before and after elements -->
+ 
+
+      <p>{{news.meta}}</p>
+</div>
+  {% endfor %}
+
+
+  </div>
+	<div class="section">About me</div>
 </div>
 
 <div>
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
